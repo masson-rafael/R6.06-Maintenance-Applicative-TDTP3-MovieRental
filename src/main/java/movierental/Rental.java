@@ -13,6 +13,15 @@ public class Rental {
         _daysRented = daysRented;
     }
 
+    public int getFrequentRenterPoints() {
+        // add frequent renter points
+        int result = 1;
+        // add bonus for a two day new release rental
+        if ((this.getMovie().getPriceCode() == Movie.NEW_RELEASE) && this.getDaysRented() > 1)
+            result++;
+        return result;
+    }
+
     public double getCharge() {
         double result = 0;
         //determine amounts for each line
