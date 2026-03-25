@@ -1,7 +1,37 @@
-# junit5-jupiter-starter-gradle
+# Movie Rental
 
-The `junit5-jupiter-starter-gradle` project demonstrates how to run tests based on JUnit
-Jupiter using [Gradle's native JUnit Platform support], Gradle's Groovy DSL
-and code and tests written in Java.
+This source code follows Martin Fowler's book "Refactoring, Improving the Design of Existing Code".
 
-[Gradle's native JUnit Platform support]: https://docs.gradle.org/current/userguide/java_testing.html#using_junit5
+When you find you have to add a feature to a program, and the program's code is not
+structured in a convenient way to add the feature, first refactor the program to make it
+easy to add the feature, then add the feature.
+
+Whenever you do refactoring, the first step is always the same.
+You need to build a solid set of tests for that section of code. The tests are essential because even
+though you follow refactorings structured to avoid most of the opportunities for introducing bugs,
+you are still human and still make mistakes. Thus you need solid tests.
+
+Actualy the `statement` method prints out a simple text output of a rental statement
+```
+Rental Record for martin
+  Ran 3.5
+  Trois Couleurs: Bleu 2.0
+Amount owed is 5.5
+You earned 2 frequent renter points
+```
+We want to write an HTML version of the statement method :
+```
+<h1>Rental Record for <em>martin</em></h1>
+<table>
+  <tr><td>Ran</td><td>3.5</td></tr>
+  <tr><td>Trois Couleurs: Bleu</td><td>2.0</td></tr>
+</table>
+<p>Amount owed is <em>5.5</em></p>
+<p>You earned <em>2</em> frequent renter points</p>
+```
+
+## Usage
+
+The purpose of this is to provide good examples for the refactoring workshop.
+
+Tests are located in the test directory and run using Junit.

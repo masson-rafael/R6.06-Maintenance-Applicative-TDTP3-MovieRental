@@ -1,21 +1,15 @@
-# Gradle
-.gradle
-build/
+# Vim
+*~
+*.swp
 
-# Ignore Gradle GUI config
-gradle-app.setting
-
-# Eclipse
-/.classpath
-/.settings/
-/.project
-/bin/
-
-# IntelliJ
+# Intellij
 .idea
 *.iml
-*.ipr
-*.iws
 
-# Misc
-*.log
+# Eclipse
+.project
+.settings
+.classpath
+
+# Maven
+target/
